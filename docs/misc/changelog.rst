@@ -33,6 +33,7 @@ Breaking Changes:
 
 New Features:
 ^^^^^^^^^^^^^
+- Updated environment requirement for ``HER`` test to install ``highway_env``
 
 Bug Fixes:
 ^^^^^^^^^^
