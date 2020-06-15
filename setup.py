@@ -81,7 +81,7 @@ setup(name='stable_baselines3',
           # Plotting learning curves
           'matplotlib',
           # highway_env for HER test
-          'git+https://github.com/eleurent/highway-env'
+          'highway-env'
       ],
       extras_require={
           'tests': [
