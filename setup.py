@@ -108,7 +108,11 @@ setup(name='stable_baselines3',
               # For atari games,
               'atari_py~=0.2.0', 'pillow',
               # Tensorboard support
-              'tensorboard'
+              'tensorboard',
+              # highway_env for HER test
+              'git+https://github.com/eleurent/highway-env',
+
+
           ]
       },
       description='Pytorch version of Stable Baselines, implementations of reinforcement learning algorithms.',
