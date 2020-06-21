@@ -257,8 +257,8 @@ class HindsightExperienceReplayBuffer(BaseBuffer):
     def _add_transition(self, obs: np.ndarray,
                         next_obs: np.ndarray,
                         action: np.ndarray,
-                        reward: float or np.ndarray,
-                        done: bool or np.ndarray):
+                        reward: Union[float, np.ndarray],
+                        done: Union[bool, np.ndarray]):
 
         if not self.add_her_while_sampling:
             self.observations[self.pos] = np.array(obs).copy()
