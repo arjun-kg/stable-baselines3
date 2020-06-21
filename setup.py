@@ -80,12 +80,9 @@ setup(name='stable_baselines3',
           'pandas',
           # Plotting learning curves
           'matplotlib',
+          # highway-env environment for HER
           'highway-env@git+https://github.com/eleurent/highway-env@master#egg=highway-env'
       ],
-      # dependency_links=[
-      #     # highway_env for HER test
-      #
-      # ],
       extras_require={
           'tests': [
               # Run tests and coverage
@@ -114,7 +111,6 @@ setup(name='stable_baselines3',
               'atari_py~=0.2.0', 'pillow',
               # Tensorboard support
               'tensorboard'
-
           ]
       },
       description='Pytorch version of Stable Baselines, implementations of reinforcement learning algorithms.',
