@@ -272,7 +272,10 @@ class HindsightExperienceReplayBuffer(BaseBuffer):
                 self.full = True
                 self.pos = 0
         else:
-            len_episode = len(done)  # TODO: Check if this handles all situations
+            if len(obs.shape) >= 2:
+                len_episode = len(obs)
+            else:
+                raise Exception("obs needs to be an episode of observations")
             self.observations[self.pos, :len_episode + 1] = np.append(np.array(obs).copy(),
                                                                       np.array(next_obs[np.newaxis, -1].copy()), axis=0)
             self.actions[self.pos, :len_episode] = np.array(action).copy()
